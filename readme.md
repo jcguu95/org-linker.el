@@ -3,7 +3,7 @@
 
 - [🔗 org-linker.el 🔗 ](#🔗-org-linkerel-🔗)
     - [Usage](#usage)
-        - [Attach and Link](#Attach and Link -)
+        - [Attach and Link](#attach-and-link)
         - [Transaction History](#transaction-history)
         - [Example](#example)
         - [Delete and Remove](#delete-and-remove)

@@ -68,7 +68,7 @@ preferred choice.
 
 + `org-linker/file-size-limit`
 
-  Default: 50000
+  Default: `50000`
   
   The maximum file or directory size to be copied (in kilobytes).
 
@@ -99,7 +99,9 @@ issues, or sharing your ideas.
 
 Help is needed!
 
-+ [ ] Publish the package to MELPA or another reputable package repository.
++ [ ] Create a logo.
 + [ ] Support inline image display.
++ [ ] Publish the package to MELPA or another reputable package
+      repository.
 + [ ] Develop a fuzzy search function that enables users to find
       the UUID based on the name of an attached file or folder.

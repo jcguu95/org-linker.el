@@ -9,7 +9,7 @@
 ;; Author: Jin-Cheng Guu <jcguu95@gmail.com>
 ;; URL: https://github.com/jcguu95/org-linker
 ;; Keywords: org-mode, org-link, convenience
-;; Version: 1.0.0
+;; Version: 1.0.1
 ;; Package-Requires: ((org "9.4"))
 
 ;; This file is NOT part of GNU Emacs.

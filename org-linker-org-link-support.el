@@ -6,9 +6,16 @@
 
 (org-add-link-type "linker" 'org-linker/open)
 
+(defun org-linker/ensure-uuid (uuid)
+  "Check whether the UUID folder exists."
+  (unless (file-directory-p (file-name-concat org-linker/root-directory uuid))
+    (org-linker/error "Folder UUID:%s does not exist." uuid)))
+
 (defun org-linker/open (path)
   "Open the file specified by PATH using org-linker."
-  (let ((full-path (concat org-linker/root-directory path)))
+  (let ((uuid (car (split-string path "/")))
+        (full-path (concat org-linker/root-directory path)))
+    (org-linker/ensure-uuid uuid)
     (find-file full-path)))
 
 (defun org-linker/trash-folder-at-point ()
@@ -27,6 +34,7 @@ Mode buffer to facilitate trashing folders linked via org-linker."
   (unless (string= "linker" (org-element-property :type (org-element-context)))
     (org-linker/error "Cursor not at an org-linker link."))
   (let ((uuid (car (split-string (org-element-property :path (org-element-context)) "/"))))
+    (org-linker/ensure-uuid uuid)
     (org-linker/trash-folder-uuid uuid)))
 
 (provide 'org-linker-org-link-support)

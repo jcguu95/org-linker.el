@@ -38,7 +38,9 @@
 
 (defcustom org-linker/root-directory
   "/tmp/org-linker/"
-  "The root directory where attachments are stored in org-linker."
+  "The root directory where attachments are stored in org-linker.
+ It is expected to be an absolute path. Tips: You can
+ use (concat (getenv \"HOME\") \"/path/to/root/\")."
   :type 'string
   :group 'org-linker)
 

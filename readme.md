@@ -3,7 +3,7 @@
 
 - [🔗 org-linker.el 🔗 ](#🔗-org-linkerel-🔗)
     - [Usage](#usage)
-        - [-](#-)
+        - [Attach and Link](#Attach and Link -)
         - [Transaction History](#transaction-history)
         - [Example](#example)
         - [Delete and Remove](#delete-and-remove)
@@ -22,7 +22,7 @@ note-taking in org-mode with reliable linkages.
 
 ## Usage
 
-#### Attach and Link
+#### Attach and Link 
 
 Use `M-x org-linker/attach-file-with-uuid` to attach a file or a
 folder as an org-mode link identified by a UUID (for this

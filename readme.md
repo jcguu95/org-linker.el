@@ -1,4 +1,4 @@
-# org-linker.el
+# 🔗 org-linker.el 🔗 
 
 Attach a file as an [org-mode
 link](https://orgmode.org/manual/External-Links.html) associated

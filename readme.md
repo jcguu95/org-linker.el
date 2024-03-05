@@ -2,12 +2,12 @@
 **Table of Contents**
 
 - [🔗 org-linker.el 🔗 ](#🔗-org-linkerel-🔗)
+    - [Comparison with org-attach](#comparison-with-org-attach)
     - [Usage](#usage)
         - [Attach and Link](#attach-and-link)
         - [Transaction History](#transaction-history)
         - [Example](#example)
         - [Delete and Remove](#delete-and-remove)
-    - [Comparison with org-attach](#comparison-with-org-attach)
     - [Customizable Variables](#customizable-variables)
     - [Contributions](#contributions)
 
@@ -20,9 +20,30 @@ link](https://orgmode.org/manual/External-Links.html) associated
 with a dynamically generated UUID. Ideal for enhancing
 note-taking in org-mode with reliable linkages.
 
+## Comparison with org-attach
+
+`org-linker` differs from `org-attach` in its approach to file
+attachment. 
+
+`org-attach` uses an org heading as a basic storing unit, which
+can lead to issues if not managed carefully (e.g. refiling or
+adding shadowing subtrees). 
+
+On the other hand, `org-linker` assigns a unique UUID to each
+attached file, ensuring a more robust linkage system. By treating
+individual files as the fundamental unit, `org-linker` provides a
+**safer and more flexible** approach to handling attachments in
+org-mode documents. For example, this allows **easy movement
+and copying of links across various org files and headings.**
+
+Both tools have their strengths and are suitable for different
+use cases. However, if you prioritize a secure and
+straightforward attachment system, org-linker might be the
+preferred choice.
+
 ## Usage
 
-#### Attach and Link 
+#### Attach and Link
 
 Use `M-x org-linker/attach-file-with-uuid` to attach a file or a
 folder as an org-mode link identified by a UUID (for this
@@ -57,27 +78,6 @@ org-linker/trash-folder-at-point` at the org link. You can
 customize the trashing function `org-linker/trashing-function`
 (see below).
    
-## Comparison with org-attach
-
-`org-linker` differs from `org-attach` in its approach to file
-attachment. 
-
-`org-attach` uses an org heading as a basic storing unit, which
-can lead to issues if not managed carefully (e.g. refiling or
-adding shadowing subtrees). 
-
-On the other hand, `org-linker` assigns a unique UUID to each
-attached file, ensuring a more robust linkage system. By treating
-individual files as the fundamental unit, `org-linker` provides a
-**safer and more flexible** approach to handling attachments in
-org-mode documents. For example, this allows **easy movement
-and copying of links across various org files and headings.**
-
-Both tools have their strengths and are suitable for different
-use cases. However, if you prioritize a secure and
-straightforward attachment system, org-linker might be the
-preferred choice.
-
 ## Customizable Variables
 
 + `org-linker/root-directory`

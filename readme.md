@@ -7,7 +7,7 @@ note-taking in org-mode with reliable linkages.
 
 ## Usage
 
-### Attach and Link
+#### Attach and Link
 
 Use `M-x org-linker/attach-file-with-uuid` to attach a file or a
 folder at point as an org-mode link identified by a UUID
@@ -16,7 +16,7 @@ directory named after that UUID under `org-linker`'s root
 directory. Press `<RET>` on the org link to open the file. You
 can customize the uuid generating function (see below).
    
-### Delete and Remove
+#### Delete and Remove
 
 Execute `M-x org-linker/trash-folder-uuid` to select the UUID and
 the corresponding folder for removal. Alternatively, you can
@@ -24,12 +24,12 @@ remove a UUID and its folder by running `M-x
 org-linker/trash-folder-at-point` at the org link. You can
 customize the trashing function (see below).
    
-### Transaction History
+#### Transaction History
 
 All transactions are logged in a human-readable text-based
 database under `org-linker`'s root directory.
 
-### Example
+#### Example
 
 For instance, if the root is `/tmp/org-linker/`, and the UUID is
 `20240101-235959`, and the file is `readme.md`, the file will be
@@ -97,7 +97,9 @@ preferred choice.
 Feel free to contribute by submitting pull requests, raising
 issues, or sharing your ideas.
 
-### TODOs
+Help is needed!
 
 + [ ] Publish the package to MELPA or another reputable package repository.
 + [ ] Support inline image display.
++ [ ] Develop a fuzzy search function that enables users to find
+      the UUID based on the name of an attached file or folder.

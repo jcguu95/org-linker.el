@@ -61,11 +61,14 @@ customize the trashing function `org-linker/trashing-function`
 
 `org-linker` differs from `org-attach` in its approach to file
 attachment. While `org-attach` uses an org heading as a basic
-storing unit, which can lead to issues if not managed carefully,
-`org-linker` assigns a unique UUID to each attached file,
-ensuring a more robust linkage system. By using individual files
-as the basic unit, `org-linker` offers a safer and more reliable
-way to manage attachments within org-mode documents.
+storing unit, which can lead to issues if not managed carefully
+(e.g. refiling or adding shadowing subtrees), `org-linker`
+assigns a unique UUID to each attached file, ensuring a more
+robust linkage system. By treating individual files as the
+fundamental unit, `org-linker` provides a safer and more
+adaptable approach to handling attachments in org-mode documents.
+This allows for easy movement and copying of links across various
+org files and headings.
 
 Both tools have their strengths and are suitable for different
 use cases. However, if you prioritize a secure and

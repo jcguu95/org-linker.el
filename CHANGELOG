@@ -1,3 +1,7 @@
+### 1.0.2
+
+Support org inline image display.
+
 ### 1.0.1
 
 Ensure UUID before opening and trashing at point.

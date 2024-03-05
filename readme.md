@@ -77,6 +77,12 @@ remove a UUID and its folder by running `M-x
 org-linker/trash-folder-at-point` at the org link. You can
 customize the trashing function `org-linker/trashing-function`
 (see below).
+
+#### Support Inline Images
+
+Support org inline images. It will redefine
+`#'org-display-inline-images` so you need to enable it by running
+`(org-linker/support-org-inline-image)`.
    
 ## Customizable Variables
 
@@ -119,7 +125,7 @@ customize the trashing function `org-linker/trashing-function`
              
   This variable stores the function responsible for trashing a
   path. It is expected to take one parameter.
-    
+ 
 ## Contributions
 
 Feel free to contribute by submitting pull requests, raising
@@ -128,7 +134,7 @@ issues, or sharing your ideas.
 Help is needed!
 
 + [ ] Create a logo.
-+ [ ] Support inline image display.
++ [X] Support inline image display.
 + [ ] Publish the package to
       [MELPA](https://github.com/melpa/melpa/blob/master/CONTRIBUTING.org)
       or another reputable package repository.

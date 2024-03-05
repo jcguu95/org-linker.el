@@ -129,7 +129,8 @@ Help is needed!
 
 + [ ] Create a logo.
 + [ ] Support inline image display.
-+ [ ] Publish the package to MELPA or another reputable package
-      repository.
++ [ ] Publish the package to
+      [MELPA](https://github.com/melpa/melpa/blob/master/CONTRIBUTING.org)
+      or another reputable package repository.
 + [ ] Develop a fuzzy search function that enables users to find
       the UUID based on the name of an attached file or folder.

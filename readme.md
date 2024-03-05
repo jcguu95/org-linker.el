@@ -27,7 +27,7 @@ customize the trashing function (see below).
 ### Transaction History
 
 All transactions are logged in a human-readable text-based
-database under org-linker's root directory.
+database under `org-linker`'s root directory.
 
 ### Example
 
@@ -76,19 +76,21 @@ preferred choice.
   
   Default: `(lambda () (shell-command-to-string "uuidgen | cut -d'-' -f1-2 | tr -d '\n'"))`
   
-  The function responsible for generating a UUID. Users are
-    encouraged to customize this function according to their
-    needs. In practice, this function is invoked by
-    #'org-linker/generate-unique-uuid to ensure the generation of
-    unique UUIDs without conflicts.
+  This variable stores the function responsible for generating a
+  UUID. Users are encouraged to customize this function according
+  to their needs. In practice, this function is invoked by
+  #'org-linker/generate-unique-uuid to ensure the generation of
+  unique UUIDs without conflicts.
 
 + `org-linker/trashing-function`
   
   Default: `(lambda (file) (call-process "trash-put" nil 0 nil file))`
-             (Move FILE to the system trash using the `trash-put` command line app.)
+
+    (The lambda function moves FILE to the system trash using the
+    `trash-put` command line app.)
              
-  The function responsible for trashing a path. It is expected to
-    take one parameter.
+  This variable stores the function responsible for trashing a
+  path. It is expected to take one parameter.
     
 ## Contributions
 

@@ -8,6 +8,7 @@
         - [Transaction History](#transaction-history)
         - [Example](#example)
         - [Delete and Remove](#delete-and-remove)
+        - [Inline Images Support](#inline-images-support)
     - [Customizable Variables](#customizable-variables)
     - [Contributions](#contributions)
 
@@ -78,10 +79,11 @@ org-linker/trash-folder-at-point` at the org link. You can
 customize the trashing function `org-linker/trashing-function`
 (see below).
 
-#### Support Inline Images
+#### Inline Images Support 
 
-Support org inline images. It will redefine
-`#'org-display-inline-images` so you need to enable it by running
+Support org inline images. Enabling this feature redefines
+`#'org-display-inline-images` and `#'+org/dwim-at-point'`, so for
+now you need to enable it by evaluating
 `(org-linker/support-org-inline-image)`.
    
 ## Customizable Variables

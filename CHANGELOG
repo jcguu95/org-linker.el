@@ -1,3 +1,8 @@
+### 1.0.3
+
+#'+org/dwim-at-point needs to be changed too while supporting
+org-inline image display.
+
 ### 1.0.2
 
 Support org inline image display.

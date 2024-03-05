@@ -1,3 +1,18 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [🔗 org-linker.el 🔗 ](#🔗-org-linkerel-🔗)
+    - [Usage](#usage)
+        - [-](#-)
+        - [Transaction History](#transaction-history)
+        - [Example](#example)
+        - [Delete and Remove](#delete-and-remove)
+    - [Comparison with org-attach](#comparison-with-org-attach)
+    - [Customizable Variables](#customizable-variables)
+    - [Contributions](#contributions)
+
+<!-- markdown-toc end -->
+
 # 🔗 org-linker.el 🔗 
 
 Attach a file as an [org-mode
@@ -10,33 +25,38 @@ note-taking in org-mode with reliable linkages.
 #### Attach and Link
 
 Use `M-x org-linker/attach-file-with-uuid` to attach a file or a
-folder at point as an org-mode link identified by a UUID
-generated on-the-fly. The file or folder is then copied to the
-directory named after that UUID under `org-linker`'s root
-directory. Press `<RET>` on the org link to open the file. You
-can customize the uuid generating function (see below).
+folder as an org-mode link identified by a UUID (for this
+transaction) generated on-the-fly. The file or folder is then
+copied to the directory named after that UUID under
+`org-linker`'s root directory. Press `<RET>` on the org link to
+open the file. You can customize the uuid generating function
+`org-linker/uuid-generator-function` (see below).
    
+#### Transaction History
+
+All transactions are logged in a human-readable text-based
+database under `org-linker`'s root directory. So if you do
+something wrong, you can always go to the root and resolve any
+problem with ease.
+
+#### Example
+
+For instance, if the root is `/tmp/org-linker/`, and the UUID of
+the transaction is `20240101-235959`, and the file is
+`readme.md`, the file will be copied to
+`/tmp/org-linker/20240101-235959/readme.md` with the transaction
+recorded in `/tmp/org-linker/db.tx`. And an org-link
+`[[linker:20240101-235959/readme.md]]` is inserted at point.
+
 #### Delete and Remove
 
 Execute `M-x org-linker/trash-folder-uuid` to select the UUID and
 the corresponding folder for removal. Alternatively, you can
 remove a UUID and its folder by running `M-x
 org-linker/trash-folder-at-point` at the org link. You can
-customize the trashing function (see below).
+customize the trashing function `org-linker/trashing-function`
+(see below).
    
-#### Transaction History
-
-All transactions are logged in a human-readable text-based
-database under `org-linker`'s root directory.
-
-#### Example
-
-For instance, if the root is `/tmp/org-linker/`, and the UUID is
-`20240101-235959`, and the file is `readme.md`, the file will be
-copied to `/tmp/org-linker/20240101-235959/readme.md` with the
-transaction recorded in `/tmp/org-linker/db.tx`. And an org-link
-`[[linker:20240101-235959/readme.md]]` is inserted at point.
-
 ## Comparison with org-attach
 
 `org-linker` differs from `org-attach` in its approach to file

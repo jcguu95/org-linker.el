@@ -133,12 +133,12 @@ now you need to enable it by evaluating
 Feel free to contribute by submitting pull requests, raising
 issues, or sharing your ideas.
 
-Help is needed!
+Help is needed! The higher the more urgent.
 
-+ [ ] Create a logo.
-+ [X] Support inline image display.
-+ [ ] Publish the package to
-      [MELPA](https://github.com/melpa/melpa/blob/master/CONTRIBUTING.org)
++ [ ] Publish the package to [MELPA](https://github.com/melpa/melpa/blob/master/CONTRIBUTING.org) 
       or another reputable package repository.
-+ [ ] Develop a fuzzy search function that enables users to find
-      the UUID based on the name of an attached file or folder.
++ [ ] Support symlink method.
++ [ ] Support attachment to a pre-selected UUID (fuzzy search through existing UUIDs).
++ [ ] Support users to fuzzy search through the UUIDs based on the name of an attached file or folder.
++ [X] Support inline image display.
++ [ ] Create a logo.

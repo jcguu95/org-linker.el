@@ -135,6 +135,7 @@ issues, or sharing your ideas.
 
 Help is needed! The higher the more urgent.
 
++ [ ] Rewrite README that shows the point, and hide technical details in another file.
 + [ ] Publish the package to [MELPA](https://github.com/melpa/melpa/blob/master/CONTRIBUTING.org) 
       or another reputable package repository.
 + [ ] Support symlink method.

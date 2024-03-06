@@ -140,5 +140,6 @@ Help is needed! The higher the more urgent.
 + [ ] Support symlink method.
 + [ ] Support attachment to a pre-selected UUID (fuzzy search through existing UUIDs).
 + [ ] Support users to fuzzy search through the UUIDs based on the name of an attached file or folder.
++ [ ] Support the search across all org files and gather the occurrences of org-linker links.
 + [X] Support inline image display.
 + [ ] Create a logo.
